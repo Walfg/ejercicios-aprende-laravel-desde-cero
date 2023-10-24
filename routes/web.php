@@ -1,31 +1,26 @@
+<!-- EJERCICIO 1 -->
 <?php
 
-use App\Http\Controllers\ProductController;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
-use Illuminate\Support\Facades\Route;
+    use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+    Route::get('/ejercicio1', function(){
+        return "GET OK";
+    });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::post('/ejercicio1', function(){
+        return "POST OK";
+    });
 
-// Ejercicio 1
+    Route::put('/ejercicio1', function(){
+        return "PUT OK";
+    });
 
-Route::get('/ejercicio1', function () {
-    return "GET OK";
-});
+    Route::patch('/ejercicio1', function(){
+        return "PATCH OK";
+    });
 
-Route::post('/ejercicio1', function () {
-    return "POST OK";
-});
+    Route::delete('/ejercicio1', function(){
+        return "DELETE OK";
+    });
+
+?>
