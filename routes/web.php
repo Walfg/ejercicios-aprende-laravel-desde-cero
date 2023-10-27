@@ -1,31 +1,19 @@
 <?php
+// Ejercicio 2
 
-use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Response as FacadesResponse;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Route::get('/ejercicio2/a', function(Request $request){
+//     return dd($request);
+// });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Ejercicio 1
-
-Route::get('/ejercicio1', function () {
-    return "GET OK";
-});
-
-Route::post('/ejercicio1', function () {
-    return "POST OK";
+Route::post('/ejercicio2/a', function (Request $request) {
+    return FacadesResponse::json([
+        "name" => $request->get("name"),
+        "description" => $request->get("description"),
+        "price" => $request->get("price")
+    ]);
 });
