@@ -1,0 +1,2 @@
+Nada, que la comprobación no mira los números de los size, sólo cuenta con que esté el size.
+No sé si es así porque da un poco igual para lo que realmente quieres evaluar, o por error, pero prefería hacertelo saber.
